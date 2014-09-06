@@ -3833,6 +3833,7 @@
             this.CB_RockSmash2.Name = "CB_RockSmash2";
             this.CB_RockSmash2.Size = new System.Drawing.Size(121, 21);
             this.CB_RockSmash2.TabIndex = 382;
+            this.CB_RockSmash2.SelectedIndexChanged += new System.EventHandler(this.CB_RockSmash2_SelectedIndexChanged);
             // 
             // CB_RockSmash3
             // 

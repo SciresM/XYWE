@@ -222,6 +222,103 @@ namespace XYWE
             "Megas-Mega (Y) - 2"
             });
             #endregion
+            #region Clear Default Data
+            CB_Grass1.Items.Clear();
+            CB_Grass2.Items.Clear();
+            CB_Grass3.Items.Clear();
+            CB_Grass4.Items.Clear();
+            CB_Grass5.Items.Clear();
+            CB_Grass6.Items.Clear();
+            CB_Grass7.Items.Clear();
+            CB_Grass8.Items.Clear();
+            CB_Grass9.Items.Clear();
+            CB_Grass10.Items.Clear();
+            CB_Grass11.Items.Clear();
+            CB_Grass12.Items.Clear();
+            CB_Yellow1.Items.Clear();
+            CB_Yellow2.Items.Clear();
+            CB_Yellow3.Items.Clear();
+            CB_Yellow4.Items.Clear();
+            CB_Yellow5.Items.Clear();
+            CB_Yellow6.Items.Clear();
+            CB_Yellow7.Items.Clear();
+            CB_Yellow8.Items.Clear();
+            CB_Yellow9.Items.Clear();
+            CB_Yellow10.Items.Clear();
+            CB_Yellow11.Items.Clear();
+            CB_Yellow12.Items.Clear();
+            CB_Purple1.Items.Clear();
+            CB_Purple2.Items.Clear();
+            CB_Purple3.Items.Clear();
+            CB_Purple4.Items.Clear();
+            CB_Purple5.Items.Clear();
+            CB_Purple6.Items.Clear();
+            CB_Purple7.Items.Clear();
+            CB_Purple8.Items.Clear();
+            CB_Purple9.Items.Clear();
+            CB_Purple10.Items.Clear();
+            CB_Purple11.Items.Clear();
+            CB_Purple12.Items.Clear();
+            CB_Red1.Items.Clear();
+            CB_Red2.Items.Clear();
+            CB_Red3.Items.Clear();
+            CB_Red4.Items.Clear();
+            CB_Red5.Items.Clear();
+            CB_Red6.Items.Clear();
+            CB_Red7.Items.Clear();
+            CB_Red8.Items.Clear();
+            CB_Red9.Items.Clear();
+            CB_Red10.Items.Clear();
+            CB_Red11.Items.Clear();
+            CB_Red12.Items.Clear();
+            CB_RT1.Items.Clear();
+            CB_RT2.Items.Clear();
+            CB_RT3.Items.Clear();
+            CB_RT4.Items.Clear();
+            CB_RT5.Items.Clear();
+            CB_RT6.Items.Clear();
+            CB_RT7.Items.Clear();
+            CB_RT8.Items.Clear();
+            CB_RT9.Items.Clear();
+            CB_RT10.Items.Clear();
+            CB_RT11.Items.Clear();
+            CB_RT12.Items.Clear();
+            CB_Surf1.Items.Clear();
+            CB_Surf2.Items.Clear();
+            CB_Surf3.Items.Clear();
+            CB_Surf4.Items.Clear();
+            CB_Surf5.Items.Clear();
+            CB_RockSmash1.Items.Clear();
+            CB_RockSmash2.Items.Clear();
+            CB_RockSmash3.Items.Clear();
+            CB_RockSmash4.Items.Clear();
+            CB_RockSmash5.Items.Clear();
+            CB_Old1.Items.Clear();
+            CB_Old2.Items.Clear();
+            CB_Old3.Items.Clear();
+            CB_Good1.Items.Clear();
+            CB_Good2.Items.Clear();
+            CB_Good3.Items.Clear();
+            CB_Super1.Items.Clear();
+            CB_Super2.Items.Clear();
+            CB_Super3.Items.Clear();
+            CB_HordeA1.Items.Clear();
+            CB_HordeA2.Items.Clear();
+            CB_HordeA3.Items.Clear();
+            CB_HordeA4.Items.Clear();
+            CB_HordeA5.Items.Clear();
+            CB_HordeB1.Items.Clear();
+            CB_HordeB2.Items.Clear();
+            CB_HordeB3.Items.Clear();
+            CB_HordeB4.Items.Clear();
+            CB_HordeB5.Items.Clear();
+            CB_HordeC1.Items.Clear();
+            CB_HordeC2.Items.Clear();
+            CB_HordeC3.Items.Clear();
+            CB_HordeC4.Items.Clear();
+            CB_HordeC5.Items.Clear();
+
+            #endregion
             #region Add Data to Boxes
             foreach (string s in specieslist)
             {
@@ -1531,7 +1628,7 @@ namespace XYWE
 
         private int[] pslot(byte[] slot)
         {
-            int index = BitConverter.ToUInt16(slot, 0) & 0x3FF;
+            int index = BitConverter.ToUInt16(slot, 0) & 0x7FF;
             int form = BitConverter.ToUInt16(slot, 0) >> 11;
             int min = slot[2];
             int max = slot[3];
@@ -1545,7 +1642,7 @@ namespace XYWE
 
         private string parseslot(byte[] slot)
         {
-            int index = BitConverter.ToUInt16(slot, 0) & 0x3FF;
+            int index = BitConverter.ToUInt16(slot, 0) & 0x7FF;
             if (index == 0) return "";
             int form = BitConverter.ToUInt16(slot, 0) >> 11;
             int min = slot[2];
